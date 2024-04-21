@@ -9,7 +9,7 @@ This repository contains files related to Biotech Final Year Project of MNNIT Al
 -   Dr. Ashutosh Mani,  
     Associate Professor, Department of Biotechnology
 
-### Project team members:
+### Project Creator:
 
 -   Abhinav Aggarwal, 20200003  
     Final year B Tech, Biotechnology
