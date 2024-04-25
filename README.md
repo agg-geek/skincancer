@@ -1,4 +1,4 @@
-# Automating diagnosis of skin lesions for detection of Skin Cancer
+# Automated diagnosis of skin lesions for detection of Skin Cancer
 
 ## Project Description
 
