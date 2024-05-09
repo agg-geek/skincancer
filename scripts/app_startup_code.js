@@ -24,7 +24,7 @@ let model;
 	);
 	$('#selected-image').attr(
 		'src',
-		'https://raw.githubusercontent.com/agg-geek/skincancer/main/assets/ISIC_0024334.jpg'
+		'https://raw.githubusercontent.com/agg-geek/skincancer/main/assets/sample_image_mel.png'
 	);
 
 	// Hide the model loading spinner
@@ -51,6 +51,10 @@ $('#predict-button').click(async function () {
 	let image = undefined;
 
 	image = $('#selected-image').get(0);
+	// if (!image) image.src = 'assets/ISIC_0024334.jpg';
+	image.crossOrigin = 'anonymous'; // or 'use-credentials' for authenticated requests
+
+	// console.log(image);
 
 	// Pre-process the image
 	let tensor = tf.fromPixels(image).resizeNearestNeighbor([224, 224]).toFloat();
@@ -82,7 +86,7 @@ $('#predict-button').click(async function () {
 		.slice(0, 3);
 
 	// Append the file name to the prediction list
-	var file_name = 'Sample image';
+	var file_name = 'sample_image_mel.png';
 	$('#prediction-list').append(
 		`<li class="w3-text-blue fname-font" style="list-style-type:none;">${file_name}</li>`
 	);
